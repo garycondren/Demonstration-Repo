@@ -1,0 +1,269 @@
+h1 {
+    color: red;
+    text-align: center;
+    text-shadow: 4px 4px 5px rgb(100, 5, 5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5.7vw;
+    font-variant: small-caps;
+   }
+
+.title {
+    color: rgb(52, 12, 233);
+}
+
+#italic {
+    color: orange;
+}
+
+nav {
+   background-color: aquamarine;
+   text-align: center;
+}
+
+.nav-wrapper {
+    background-color: blue;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+
+
+.container {
+    border: 10px dashed aqua;
+    margin: 50px 50px 25px 0px;
+    padding: 20px 5px 20px 20px;
+
+}
+    /* Margins:  If just one number, it provides margins all around.  If four numbers, then it's top, right, bottom, left.
+    w3 school or MDN are good sources of information.
+    */
+
+.box{
+    height: 200px;
+    width: 200px;
+    background: rgb(80, 138, 185);
+    margin: 10px 10px;
+    
+    }
+
+
+@keyframes fadeMe {
+    0%{opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes rotation {
+    0%{transform: rotate(90deg);}
+    50%{transform: rotate(180deg);}
+    1000%{transform: rotate(360deg);}
+}
+
+#box2 {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: 20s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, purple, orange, yellow, pink, purple) ;
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+
+#box3 {
+    animation: getBigger infinite 8s ease-in;
+    /* The syntax shown above is a shorter way of doing what we did previously with multiple statements. */
+    border-radius: 50%;
+    background: orange;
+}
+
+@keyframes changeColors {
+    0% {background-color: grey;}
+    25% {background-color: blue;}
+    50% {background-color:yellow;}
+    75% {background-color: red;}
+    100% {background-color:green;}
+}
+
+#box4 {
+    animation: changeColors 3s 2s forwards;
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px;}
+    50% {left: 100px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px;}
+}
+
+#box5 {
+    position: relative;
+    /* position property can be "fixed", or "sticky", et cetera. */
+    background: red;
+    animation: moveBox 5s 3s;
+}
+
+#box6{
+    top: 10px;
+    left: 20px;
+    position: relative
+    /*  absolute is from the top of the page.   Relative is relative to where it would have been. */
+    /*  "Fixed" fixes the item on the screen, regardless of the other stuff on the screen.  The other stuff will scroll past it. */
+    /*  "Fixed" might work well with a nav bar if you want the user to always see it. */
+}
+
+
+/* background images:  Can use a background for the whole page with "body" or "html".
+
+html {
+    background-image: radial-gradient(blue, green, purple);
+}
+
+
+
+
+
+
+html {
+    background-image: url(mountains.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+html {
+    background-image: linear-gradient(to right, blue, green, purple);
+    /* or "to bottom" or "to left"   Default is "to bottom" */
+   }
+*/
+
+
+
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin: 50px;
+}
+
+.input-field {
+    margin: 50px;
+}
+
+
+
+    .circle-img {
+        border-radius: 50%;
+    }
+
+    img {
+        box-shadow: 5px 20px 5px rgb(58, 57, 57);
+    }
+
+
+    .flex{
+        margin: 30px;
+        border: 3px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 100px;
+        
+
+
+    }
+
+
+    form input, textarea, button{
+        display: block;
+        margin: 30px;
+}
+
+
+.wrapper {
+    display: grid;
+grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 19% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: white;
+    color: #444;
+}
+
+.Box {
+    background-color:white;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col / span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(pink, yellow, purple, orange);
+}
+.d {
+    grid-column: col / span  3 ;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 3 / span  3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(orange, purple, yellow, pink);
+}
